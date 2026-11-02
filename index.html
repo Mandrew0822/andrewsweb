@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A little about me, my interests, and what I'm working on.">
+	<title>About Me</title>
+	<style>
+		:root { color-scheme: light; --ink: #f7f7f7; --muted: #64736d; --accent: #cfd8d6; --paper: #444443; }
+		* { box-sizing: border-box; }
+		body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 system-ui, sans-serif; }
+		header { padding: 1.25rem max(1.5rem, calc((100% - 900px) / 2)); background: rgb(65, 64, 64); border-bottom: 1px solid #e4e9e3; }
+		header a { color: var(--accent); font-weight: 700; text-decoration: none; }
+		main { max-width: 760px; margin: 4rem auto; padding: 0 1.5rem; }
+		.intro { padding: 2.5rem; background: rgb(51, 51, 51); border-radius: 18px; box-shadow: 0 12px 35px #20302b0d; }
+		.eyebrow { color: var(--accent); font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+		h1 { margin: .4rem 0 1rem; font-size: clamp(2.4rem, 8vw, 4rem); line-height: 1.1; }
+		h2 { margin-top: 2rem; font-size: 1.25rem; }
+		p { color: var(--muted); }
+		.links { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+		.links a { padding: .65rem 1rem; border: 1px solid #303130; border-radius: 999px; color: var(--accent); text-decoration: none; }
+		.links a:hover { background: #282928; }
+		footer { padding: 1.5rem; color: var(--muted); text-align: center; font-size: .9rem; }
+		@media (max-width: 520px) { main { margin: 2rem auto; } .intro { padding: 1.5rem; } }
+	</style>
+</head>
+<body>
+	<header><a href="#home">About Me</a></header>
+	<main id="home">
+		<section class="intro" aria-labelledby="welcome">
+			<div class="eyebrow">Hello there</div>
+			<img src="1793575057872.jpg" alt="Picture of myself" style="width: 100%; max-width: 200px; border-radius: 50%; margin-top: 1rem;">
+			<h1 id="welcome">I’m Andrew.</h1>
+			<p>Welcome to my corner of the internet. I’m learning, creating, and exploring new ideas—one project at a time.</p>
+			<h2>A little about me</h2>
+			<p>I enjoy building useful things, solving problems, and discovering how things work. This site is a simple place to share what I’m up to and what inspires me.</p>
+			<h2>What I’m working on</h2>
+			<p>Right now, I’m focused on learning new skills and turning ideas into real projects. Check back soon to see what’s next.</p>
+			<nav class="links" aria-label="My Links">
+				<a href="mailto:2026andrewsodyssey@egmail.com">Get in touch</a>
+				<a href="https://github.com/Mandrew0822">GitHub</a>
+                <a href="https://www.linkedin.com/in/andrew-sodyssey-0822/">LinkedIn</a>
+                <a href="downloads.html" class="button">Downloads</a>
+			</nav>
+		</section>
+	</main>
+	<footer>Made with care · © <span id="year"></span> Andrew</footer>
+	<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

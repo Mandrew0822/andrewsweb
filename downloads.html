@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Files and projects shared by Andrew.">
+	<title>Downloads | Andrew</title>
+	<style>
+		:root {
+			color-scheme: dark;
+			--paper: #292a28;
+			--surface: #353633;
+			--ink: #f4f3ec;
+			--muted: #b7b9ae;
+			--accent: #c3e6a5;
+			--line: #ffffff24;
+		}
+		* { box-sizing: border-box; }
+		body {
+			min-height: 100vh;
+			margin: 0;
+			background: var(--paper);
+			color: var(--ink);
+			font: 16px/1.6 system-ui, sans-serif;
+		}
+		header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 1rem;
+			padding: 1.1rem max(1.5rem, calc((100% - 1040px) / 2));
+			border-bottom: 1px solid var(--line);
+			background: #30312f;
+		}
+		header a { color: var(--ink); font-weight: 700; text-decoration: none; }
+		header nav a { color: var(--muted); font-size: .95rem; }
+		header a:hover { color: var(--accent); }
+		main { max-width: 1040px; margin: 0 auto; padding: 5rem 1.5rem 4rem; }
+		.kicker {
+			display: flex;
+			align-items: center;
+			gap: .65rem;
+			color: var(--accent);
+			font-size: .78rem;
+			font-weight: 700;
+			letter-spacing: .12em;
+			text-transform: uppercase;
+		}
+		.kicker::before { width: 1.6rem; height: 2px; background: var(--accent); content: ""; }
+		h1 { max-width: 700px; margin: .7rem 0 1rem; font-size: clamp(3rem, 8vw, 6.5rem); line-height: .98; }
+		.lede { max-width: 520px; margin: 0; color: var(--muted); font-size: 1.1rem; }
+		.shelf {
+			display: grid;
+			grid-template-columns: minmax(0, 1fr) auto;
+			align-items: center;
+			gap: 2rem;
+			margin-top: 4rem;
+			padding: 2rem 0;
+			border-top: 1px solid var(--line);
+			border-bottom: 1px solid var(--line);
+		}
+		.shelf h2 { margin: 0 0 .35rem; font-size: 1.15rem; }
+		.shelf p { max-width: 480px; margin: 0; color: var(--muted); }
+		.mark {
+			display: grid;
+			width: 5rem;
+			aspect-ratio: 1;
+			place-items: center;
+			border: 1px solid #c3e6a54d;
+			border-radius: 50%;
+			color: var(--accent);
+			font-size: 1.7rem;
+		}
+		footer { max-width: 1040px; margin: 0 auto; padding: 1.5rem; color: var(--muted); font-size: .9rem; }
+		@media (max-width: 560px) {
+			header { padding-inline: 1.25rem; }
+			main { padding: 3.5rem 1.25rem 3rem; }
+			.shelf { margin-top: 3rem; }
+			.mark { width: 3.5rem; }
+			footer { padding-inline: 1.25rem; }
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<a href="index.html">Andrew</a>
+		<nav aria-label="Main navigation"><a href="index.html">About me</a></nav>
+	</header>
+	<main>
+		<div class="kicker">The file shelf</div>
+		<h1>Downloads</h1>
+		<p class="lede">A home for things I make and want to share. Check back as this collection grows.</p>
+		<section class="shelf" aria-labelledby="empty-title">
+			<div>
+				<h2 id="empty-title">A little quiet for now</h2>
+				<p>There aren’t any files here yet. I’ll add something when it’s ready to share.</p>
+			</div>
+			<div class="mark" aria-hidden="true">＋</div>
+		</section>
+	</main>
+	<footer>Made with care · © <span id="year"></span> Andrew</footer>
+	<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
